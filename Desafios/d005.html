@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+    <style>
+        body{ font: 12pt Arial }
+        button{ font-size: 12pt; padding: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="conversor()">Converter</button>
+    <section id="re">
+        <p>Clique no botão acima para iniciar</p>
+    </section>
+
+    <script>
+        function conversor(){
+            let di = Number(window.prompt("Digite uma distância em metros(m): "))
+            re.innerHTML = `<h2>A distância de ${di} metros, corresponde a...</h2>`
+            re.innerHTML += `<p>${(di/1000).toFixed(3)} quilômetros(Km)</p>`
+            re.innerHTML += `<p>${(di/100).toFixed(3)} hectômetros(Hm)</p>`
+            re.innerHTML += `<p>${(di/10).toFixed(3)} decâmetro(Dam)</p>`
+            re.innerHTML += `<p>${(di*10).toFixed(3)} decímetros(dm)</p>`
+            re.innerHTML += `<p>${(di*100).toFixed(3)} centímetros(cm)</p>`
+            re.innerHTML += `<p>${(di*1000).toFixed(3)} milímetros(mm)</p>`
+            
+        }
+    </script>
+</body>
+</html>
